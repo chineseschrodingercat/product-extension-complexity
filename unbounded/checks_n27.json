@@ -1,0 +1,58 @@
+{
+  "n": 27,
+  "N": 6,
+  "L": 830376562500000,
+  "proof_budget": 2025,
+  "exact_error_bound": "83037656290500/415186230937499",
+  "geometry": [
+    {
+      "k": 2,
+      "coarse_rank": 9,
+      "dimension": 69,
+      "retained_facet_rows": 1080,
+      "potential_vertex_columns": 438,
+      "two_facet_direction_ranks": [
+        68,
+        68
+      ],
+      "exact_representations": 876,
+      "graph_functionals_checked": 189
+    },
+    {
+      "k": 3,
+      "coarse_rank": 7,
+      "dimension": 67,
+      "retained_facet_rows": 1728,
+      "potential_vertex_columns": 292,
+      "two_facet_direction_ranks": [
+        66,
+        66
+      ],
+      "exact_representations": 876,
+      "graph_functionals_checked": 189
+    }
+  ],
+  "intersection_sizes_single_coordinate": {
+    "2": 63948,
+    "1": 63948
+  },
+  "conditional_counts": [
+    {
+      "k": 2,
+      "maximum": "1",
+      "required_extra_cost_per_good_block": "3"
+    },
+    {
+      "k": 3,
+      "maximum": "27/16",
+      "required_extra_cost_per_good_block": "32/27"
+    }
+  ],
+  "partial_rank_lower_bounds": [
+    2025,
+    1976
+  ],
+  "partial_joint_upper_bound": 3996,
+  "binary_deficit_lower_bound": 5,
+  "note": "Finite checks of the proof inputs. The inequalities for every real factorization and every n are proved in the note."
+}

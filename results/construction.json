@@ -1,0 +1,30 @@
+{
+  "sympy": "1.14.0",
+  "base_candidates": 39,
+  "base_dimension": 11,
+  "retained_facets": 24,
+  "total_facets": 37,
+  "split_facets": 13,
+  "dimension_of_counterexample_factor": 24,
+  "facets_of_counterexample_factor": 50,
+  "single_matrix_shape": [
+    24,
+    39
+  ],
+  "single_matrix_rank": 12,
+  "single_factorization_width": 14,
+  "paired_matrix_shape": [
+    48,
+    1521
+  ],
+  "paired_factorization_width": 27,
+  "paired_integer_entries_compared": 73008,
+  "checked_cycles": 64,
+  "checked_exceptional_sets": 36,
+  "candidate_normal_systems": 2496,
+  "coverage_error": "663/5000",
+  "cycle_error": "39/100",
+  "extension_complexity_factor": 40,
+  "extension_complexity_square_upper_bound": 79,
+  "twice_extension_complexity_factor": 80
+}

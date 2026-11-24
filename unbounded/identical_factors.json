@@ -1,0 +1,41 @@
+{
+  "first_two_blocks": {
+    "j_list": [
+      2,
+      4
+    ],
+    "possible_profiles": 31,
+    "single_inputs": 105,
+    "demands": 210,
+    "five_profile_candidates_exhausted": 169911,
+    "individual_cover_number": 6,
+    "square_inputs_checked": 11025,
+    "shared_square_profiles_sufficient": 10
+  },
+  "node_deletions": [
+    {
+      "j": 2,
+      "coarse_nodes_checked": 6,
+      "coarse_edges": 6,
+      "maximum_degree": 2
+    },
+    {
+      "j": 4,
+      "coarse_nodes_checked": 42,
+      "coarse_edges": 140,
+      "maximum_degree": 20
+    }
+  ],
+  "counting_triples_excluded": 147135,
+  "three_block_fractional_witness_for_four_label_family": {
+    "input_sets": 4,
+    "constraints_checked": 48,
+    "profiles": 64,
+    "weight_per_profile": "1/18",
+    "total": "32/9"
+  },
+  "clone_count_per_edge": 24,
+  "individual_stars": 3504,
+  "rank_from_proved_lemmas": 3510,
+  "square_rank_upper_bound_from_construction": 7018
+}

@@ -1,0 +1,31 @@
+{
+  "dual": [
+    {
+      "k": 2,
+      "tests": 864,
+      "profiles": 624,
+      "maximum_tests_served": 216,
+      "maximizing_arities": [
+        1,
+        2
+      ],
+      "capacity_per_profile": "1",
+      "dual_lower_bound_per_block": "3"
+    },
+    {
+      "k": 3,
+      "tests": 256,
+      "profiles": 624,
+      "maximum_tests_served": 108,
+      "maximizing_arities": [
+        3,
+        4
+      ],
+      "capacity_per_profile": "27/16",
+      "dual_lower_bound_per_block": "32/27"
+    }
+  ],
+  "exceptional_budget_endpoint_checks": 1002,
+  "triple_choices_verified": 64,
+  "six_block_small_factor_exact": 440
+}

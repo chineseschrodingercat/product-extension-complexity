@@ -1,0 +1,25 @@
+{
+  "graph_checks": [
+    {
+      "blocks": 1,
+      "excluded_width": 13,
+      "checked_exception_patterns": 37,
+      "alternating_cycles": 64
+    },
+    {
+      "blocks": 2,
+      "excluded_width": 26,
+      "checked_exception_patterns": 2701,
+      "alternating_cycles": 128
+    }
+  ],
+  "star_cover": {
+    "columns_checked": 39,
+    "rectangle_cover_single": 12,
+    "rectangle_cover_square": 24
+  },
+  "exact_probe_bound": "663/2500",
+  "exact_cycle_bound": "62412/76523",
+  "maximum_cells_two_cross_block_rectangles": 7,
+  "cells_covered_three_explicit_selectors": 9
+}

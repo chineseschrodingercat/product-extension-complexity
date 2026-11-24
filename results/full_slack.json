@@ -1,0 +1,12 @@
+{
+  "vertices_of_factor": 150,
+  "facets_of_factor": 50,
+  "single_NMF_width": 40,
+  "single_entries_checked": 7500,
+  "product_vertices": 22500,
+  "product_facets": 100,
+  "product_NMF_width": 79,
+  "product_entries_checked": 2250000,
+  "exact_integer_residual": 0,
+  "integer_overflow_upper_bound": 79000079
+}

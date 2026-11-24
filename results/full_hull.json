@@ -1,0 +1,22 @@
+{
+  "backend": "pycddlib 3.0.2 cdd.gmp double description, exact rational arithmetic",
+  "verified_facets": 37,
+  "true_base_vertices": 39,
+  "true_wedge_vertices": 150,
+  "base_dimension": 11,
+  "retained_facets": 24,
+  "positive_omitted_slack_histogram": {
+    "1": 3,
+    "2": 36
+  },
+  "displayed_cluster_table_matches_exact_hull": true,
+  "split_facets": 13,
+  "wedge_dimension": 24,
+  "single_columns_checked": 39,
+  "product_columns_checked": 1521,
+  "minimum_shared_selectors": 1,
+  "factor_extension_complexity": 40,
+  "square_extension_size": 79,
+  "direct_full_space_vertices": 150,
+  "full_halfspaces": 50
+}
