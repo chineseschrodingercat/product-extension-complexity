@@ -1,6 +1,6 @@
 # Extension complexity is not additive under Cartesian products
 
-Code and finite certificates accompanying the paper by Minhao Liu. [Manuscript code snapshot](https://github.com/chineseschrodingercat/product-extension-complexity/tree/paper-2026-11-24)
+Code and finite certificates accompanying the paper by Minhao Liu. [Repository](https://github.com/chineseschrodingercat/product-extension-complexity)
 
 The manuscript proves its lower bounds for arbitrary real nonnegative factorizations. The scripts below verify the finite inputs and explicit certificates. Run them from the directory containing this README, with a fresh output directory. A working configuration uses Python 3.13, SymPy 1.14.0, NumPy, pycddlib 3.0.2 with GMP, and python-flint 0.9.0. The logical results in the reference JSON files can be compared directly after parsing.
 
@@ -27,6 +27,6 @@ python unbounded/verify_unbounded_note.py
 python unbounded/check_identical_factors.py --out replay/identical_factors.json
 ~~~
 
-- **Two different factors.** The SymPy family checker verifies the graph ranks, star and label identities, conditional capacities, and error estimates at the requested parameter. The independent four-block program exhausts label profiles and computes the dual conditional bound in rational arithmetic. The expert-supplied FLINT script tests every coordinate row individually, including all 2,808 facet-direction rank calculations in the two bases. Its reference stdout is `unbounded/expert_check.txt`. Its section and equation numbers refer to the original research note.
+- **Two different factors.** The SymPy family checker verifies the graph ranks, star and label identities, conditional capacities, and error estimates at the requested parameter. The independent four-block program exhausts label profiles and computes the dual conditional bound in rational arithmetic. A separate python-flint script, `unbounded/verify_unbounded_note.py`, tests every coordinate row individually, including all 2,808 facet-direction rank calculations in the two bases. Its reference output is `unbounded/flint_reference_output.txt`.
 - **Identical factors.** The standard-library checker enumerates all 169,911 candidate covers of size five on the first two alphabets, of sizes three and seven, and verifies a cover of size six. It tests the paired construction on all 11,025 input pairs, connectivity after every coarse-node deletion in both graphs, and the inequalities used in the counting lemma for selected parameters. It also verifies the three-block fractional certificate of total weight 32/9 in the four-label construction. The rank entries in the output apply the proved lemmas to the checked combinatorial counts.
 - **Reference outputs.** The JSON and text files in `unbounded` accompany these checks. The general conclusions about every parameter are analytic. The constructions with unbounded deficit specify polytopes through rational point hulls and omitted-facet wedges.
