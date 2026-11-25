@@ -54,5 +54,5 @@
   ],
   "partial_joint_upper_bound": 888,
   "binary_deficit_lower_bound": 2,
-  "note": "Finite checks of the proof inputs. The inequalities for every real factorization and every n are proved in the note."
+  "note": "Finite checks of the proof inputs. The inequalities for every real factorization and every n are proved in the paper."
 }

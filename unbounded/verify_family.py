@@ -163,7 +163,7 @@ def main():
                 partial_rank_lower_bounds=[ceiling((72+c)*args.n) for c in (c2,c3)],
                 partial_joint_upper_bound=148*args.n,
                 binary_deficit_lower_bound=ceiling(gain*args.n),
-                note="Finite checks of the proof inputs. The inequalities for every real factorization and every n are proved in the note.")
+                note="Finite checks of the proof inputs. The inequalities for every real factorization and every n are proved in the paper.")
     with args.out.open("x",encoding="utf-8") as f:
         json.dump(report,f,indent=2)
         f.write("\n")

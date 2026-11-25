@@ -1,19 +1,28 @@
-"""Independent exact check of the finite claims in the note
-"Unbounded savings in a single Cartesian product" (Nov 23, 2026).
+"""Exact check of the finite inputs of Section 6 of the paper (two different factors).
 
-Checks (exact arithmetic, python-flint / fractions):
-  * graphs G_2, G_3: 12 edges, max degree 3, min degree >= 2
-  * stars r_{e,c}: p = 12N = 72, each row hits <= 3 stars
-  * identity (1): X_T = A_s + sum_{t in T\\s} sum_c r_{(t,T),c} for all s in T
-  * label property, hitting sets behind (2), cross-intersection behind (3),
-    common element of any three 3-sets (n=6 check)
-  * the functional D_i: kills every star, equals 1 on every X_T and A_s
-  * Section 4: rank H' = 12(N-1)+rank H, dim aff B = rank H',
-    every coordinate row F gives a facet (rank of stars off F = rank H' - 1,
-    some X_T zero at F, some X_T positive at F), distinct rows -> distinct facets
-  * all constants in Proposition 3 and Theorem 1
+All arithmetic is exact (python-flint integer matrices and Python fractions).
+The script checks:
+  * the graphs Gamma_2 and Gamma_3: 12 edges, maximum degree 3, minimum degree
+    at least 2;
+  * the stars g_{e,c}: p = 12N = 72, and each row meets at most 3 stars;
+  * the identity (6.1), v_T = b_s + sum_{t in T\\s} sum_c g_{(t,T),c}, for all
+    s in T;
+  * the row labels, the hitting sets behind (6.2), the intersection property
+    behind (6.3), and the common label of any three 3-sets used for n = 6;
+  * the functional Phi_i: it vanishes on every star and equals 1 on every v_T
+    and every b_s;
+  * the facet verification of Section 6.3: rank E'_k = 12(N-1) + rank E_k, the
+    affine hull of C_k has dimension rank E'_k, every coordinate row F gives a
+    facet (the stars vanishing at F have rank E'_k - 1, some v_T vanishes at F
+    and some v_T is positive at F), and distinct rows give distinct facets;
+  * the constants in Proposition 11 and Theorem 2.
 
-Requirements: Python 3, python-flint (pip install python-flint).
+Notation in the code: A[s], X[T] and R[e, c] are the vectors b_s, v_T and
+g_{e,c}; H and H' are the incidence matrices E_k and E'_k; B is the polytope
+C_k. In check_constants, R and L are the budget H and the scale Lambda of
+Proposition 11.
+
+Requirements: Python 3 and python-flint (pip install python-flint).
 Run: python3 verify_unbounded_note.py   (about 15 s; prints ALL CHECKS PASSED)
 """
 from fractions import Fraction as Fr
@@ -72,7 +81,7 @@ def check_graph(G):
     nrows = len(G["rows"])
     hits = [sum(G["R"][s][i] for s in G["stars"]) for i in range(nrows)]
     assert max(hits) <= 3
-    # identity (1)
+    # identity (6.1)
     for T in G["right"]:
         for s in T:
             rhs = list(G["A"][s])
@@ -189,7 +198,7 @@ def check_constants():
     lb3 = (p + Fr(32, 27)) * n
     assert 439 < lb3 < 440 and 6 * p + 8 == 440
     assert (2 * p + 4) * n == 888 and 450 + 440 - 888 == 2
-    # K
+    # the constant K in Theorem 2
     assert 6 * (1 + p) == 438 and 4 * (1 + p) == 292 and 2 * p + 5 == 149
     out["eta_order"] = f"5/(27K) ~ 10^{{-{len(str(149 + 2*(2**438 + 2**292)))-1}}}"
     return out
