@@ -1,9 +1,0 @@
-set systems: {'transversal_2sets': 3, 'transversal_3sets': 2}
-constants: {'max_d d*rho^(d-1), k=2': (Fraction(1, 1), [1, 2]), 'c_2': Fraction(3, 1), 'max_d d*rho^(d-1), k=3': (Fraction(27, 16), [3, 4]), 'c_3': Fraction(32, 27), 'eta_order': '5/(27K) ~ 10^{-132}'}
-k=2 graph: {'rows': 1080, 'degrees': [2, 3]}
-k=2 functional rows used: 10
-k=2 facets: {'rank_H': 9, 'rank_Hp': 69, 'dim_B': 69, 'coordinate_facets': 1080}
-k=3 graph: {'rows': 1728, 'degrees': [3]}
-k=3 functional rows used: 8
-k=3 facets: {'rank_H': 7, 'rank_Hp': 67, 'dim_B': 67, 'coordinate_facets': 1728}
-ALL CHECKS PASSED
